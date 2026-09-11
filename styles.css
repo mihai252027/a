@@ -1,0 +1,180 @@
+:root {
+    --bg: #f4f7fb;
+    --card: #fff;
+    --text: #172033;
+    --muted: #687386;
+    --primary: #5b5ce2;
+    --border: #e1e6ef;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    min-height: 100vh;
+}
+
+aside {
+    padding: 32px 22px;
+    color: white;
+    background: linear-gradient(160deg, #25284b, #5b5ce2);
+}
+
+aside h1 {
+    margin: 0 0 40px;
+    font-size: 1.35rem;
+}
+
+aside p {
+    color: #dfe1ff;
+    line-height: 1.6;
+}
+
+main {
+    width: min(100% - 40px, 1000px);
+    margin: auto;
+    padding: 42px 0;
+}
+
+h2 {
+    margin: 0 0 8px;
+    font-size: 2rem;
+}
+
+.subtitle {
+    color: var(--muted);
+    margin-bottom: 28px;
+}
+
+.upload {
+    padding: 34px;
+    text-align: center;
+    border: 2px dashed #aeb5f7;
+    border-radius: 18px;
+    background: #fafaff;
+}
+
+.upload.dragover {
+    background: #ececff;
+}
+
+.upload strong,
+.upload span {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.upload span,
+.meta,
+.count {
+    color: var(--muted);
+}
+
+button,
+.button {
+    border: 0;
+    border-radius: 9px;
+    padding: 11px 17px;
+    color: white;
+    background: var(--primary);
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+button.danger {
+    background: #e05252;
+    padding: 8px 11px;
+    font-size: 0.85rem;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 36px 0 14px;
+}
+
+.files {
+    display: grid;
+    gap: 12px;
+}
+
+.file {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 16px 18px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: #eeefff;
+}
+
+.info {
+    flex: 1;
+    min-width: 0;
+}
+
+.name {
+    display: block;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.meta {
+    margin-top: 5px;
+    font-size: 0.85rem;
+}
+
+.empty {
+    padding: 35px;
+    color: var(--muted);
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+}
+
+@media (max-width: 650px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    aside {
+        padding: 22px;
+    }
+
+    main {
+        width: min(100% - 24px, 1000px);
+        padding: 28px 0;
+    }
+
+    .file {
+        flex-wrap: wrap;
+    }
+}

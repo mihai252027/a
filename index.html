@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Mi espacio personal</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="layout">
+		<aside><h1>✦ Mi espacio</h1><p>Tu página personal para organizar y conservar tus archivos directamente en este navegador.</p></aside>
+		<main>
+			<h2>Bienvenido</h2><p class="subtitle">Sube tus archivos y accede a ellos cuando quieras desde este dispositivo.</p>
+			<section class="upload" id="dropZone">
+				<strong>Arrastra tus archivos aquí</strong><span>o selecciónalos desde tu ordenador</span>
+				<label class="button" for="fileInput">Elegir archivos</label><input id="fileInput" type="file" multiple />
+			</section>
+			<div class="section-title"><h3>Mis archivos</h3><span class="count" id="count">0 archivos</span></div>
+			<div class="files" id="fileList"><div class="empty">Todavía no has guardado ningún archivo.</div></div>
+		</main>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
